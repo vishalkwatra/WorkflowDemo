@@ -1,0 +1,57 @@
+{
+    "id": "productform",
+    "name": "ProductForm",
+    "revision": "1.0",
+    "readOnly": false,
+    "content": [
+        {
+            "id": "product_data",
+            "type": "section",
+            "title": "Product Data",
+            "content": [
+                {
+                    "id": "product_id",
+                    "type": "integer",
+                    "label": "Product Id",
+                    "readOnly": false,
+                    "value": "${context.productData.ProductID}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "product_name",
+                    "type": "string",
+                    "label": "Product Name",
+                    "readOnly": false,
+                    "value": "${context.productData.ProductName}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "supplier_id",
+                    "type": "integer",
+                    "label": "Supplier Id",
+                    "readOnly": false,
+                    "value": "${context.productData.SupplierID}",
+                    "constraints": {
+                        "required": false
+                    }
+                }
+            ]
+        }
+    ],
+    "decisions": [
+        {
+            "id": "approve",
+            "text": "Approve",
+            "decisionType": "positive"
+        },
+        {
+            "id": "reject",
+            "text": "Reject",
+            "decisionType": "negative"
+        }
+    ]
+}
